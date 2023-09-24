@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kohlschutter.test</groupId>
+    <artifactId>iaikbug</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <iaik.path>/tmp</iaik.path>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kohlschutter.test.iaikbug</groupId>
+            <artifactId>iaik-jce</artifactId>
+            <version>0</version>
+            <scope>system</scope>
+            <systemPath>${iaik.path}/iaik_jce.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.kohlschutter.test.iaikbug</groupId>
+            <artifactId>iaik-ssl</artifactId>
+            <version>0</version>
+            <scope>system</scope>
+            <systemPath>${iaik.path}/iaik_ssl.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.kohlschutter.test.iaikbug</groupId>
+            <artifactId>iaik-jsse</artifactId>
+            <version>0</version>
+            <scope>system</scope>
+            <systemPath>${iaik.path}/iaik_jsse.jar</systemPath>
+        </dependency>
+    </dependencies>
+</project>
